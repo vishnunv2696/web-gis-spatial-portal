@@ -4,8 +4,8 @@
  * geolocation, and status bar readouts.
  */
 
-import { MAP_CONFIG, BASEMAPS } from './config.js';
-import { state } from './state.js';
+import { MAP_CONFIG, BASEMAPS } from './config.js?v=9';
+import { state } from './state.js?v=9';
 
 let map = null;
 let currentTileLayer = null;

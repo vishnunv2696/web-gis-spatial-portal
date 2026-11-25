@@ -10,10 +10,10 @@
  *   - Interactive Report Card in Results tab with division breakdowns & GeoJSON export.
  */
 
-import { state } from '../state.js';
-import { switchTab } from '../ui.js';
-import { toMeters, fromMeters, formatDistance, formatArea } from '../units.js';
-import { zoomToFeature } from '../layers.js';
+import { state } from '../state.js?v=9';
+import { switchTab } from '../ui.js?v=9';
+import { toMeters, fromMeters, formatDistance, formatArea } from '../units.js?v=9';
+import { zoomToFeature } from '../layers.js?v=9';
 
 export function renderBufferImpactTool() {
   const isImp = state.unitSystem === 'imperial';

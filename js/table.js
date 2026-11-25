@@ -4,8 +4,8 @@
  * text searching, row-to-map synchronization, and CSV export.
  */
 
-import { state } from './state.js';
-import { zoomToFeature } from './layers.js';
+import { state } from './state.js?v=9';
+import { zoomToFeature } from './layers.js?v=9';
 
 let activeLayerId = 'points';
 let sortColumn = null;

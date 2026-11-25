@@ -4,9 +4,9 @@
  * Provides dropdown suggestions, keyboard navigation, recent searches, and map pin drop with rich popups.
  */
 
-import { state } from './state.js';
-import { parseCoordinates, formatDD, formatDMS, toCopyString } from './coords.js';
-import { pulseAtLocation } from './map.js';
+import { state } from './state.js?v=9';
+import { parseCoordinates, formatDD, formatDMS, toCopyString } from './coords.js?v=9';
+import { pulseAtLocation } from './map.js?v=9';
 
 let searchMarker = null;
 let highlightedIndex = -1;

@@ -4,7 +4,7 @@
  * CSRF token attachment, role-based UI states, and session expiration handlers.
  */
 
-import { state } from './state.js';
+import { state } from './state.js?v=9';
 
 let currentUser = null;
 let currentCsrfToken = '';

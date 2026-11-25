@@ -4,9 +4,9 @@
  * and the User Management panel (listing, creation, status toggle, password reset).
  */
 
-import { state } from './state.js';
-import { getCsrfToken, handleSessionExpired } from './auth.js';
-import { zoomToFeature } from './layers.js';
+import { state } from './state.js?v=9';
+import { getCsrfToken, handleSessionExpired } from './auth.js?v=9';
+import { zoomToFeature } from './layers.js?v=9';
 
 export function initAdmin() {
   setupEditHistoryModal();

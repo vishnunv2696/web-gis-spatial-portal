@@ -4,9 +4,9 @@
  * plus Nearest Road detection from any clicked point using Turf.js.
  */
 
-import { state } from '../state.js';
-import { switchTab } from '../ui.js';
-import { formatDistance, formatArea, fromMeters, fromSquareMeters } from '../units.js';
+import { state } from '../state.js?v=9';
+import { switchTab } from '../ui.js?v=9';
+import { formatDistance, formatArea, fromMeters, fromSquareMeters } from '../units.js?v=9';
 
 let activeMeasureMode = null; // 'distance' | 'area' | 'nearest-road'
 let measurePoints = [];

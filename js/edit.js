@@ -4,9 +4,9 @@
  * directly on the Leaflet map with automatic audit logging to portal.edit_log.
  */
 
-import { state } from './state.js';
-import { getCsrfToken, handleSessionExpired } from './auth.js';
-import { reloadLayer } from './layers.js';
+import { state } from './state.js?v=9';
+import { getCsrfToken, handleSessionExpired } from './auth.js?v=9';
+import { reloadLayer } from './layers.js?v=9';
 
 let activeEditMode = 'create'; // 'create' | 'update' | 'delete'
 let editClickMarker = null;

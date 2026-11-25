@@ -7,7 +7,7 @@
  *   4. Real-time layer and attribute table synchronization, Copy & CSV export.
  */
 
-import { state } from '../state.js';
+import { state } from '../state.js?v=9';
 
 let activeCalcMode = 'stats'; // 'stats' | 'calc'
 let lastComputedStats = null;

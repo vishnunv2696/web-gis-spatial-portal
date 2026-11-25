@@ -5,9 +5,9 @@
  * interactive, exportable result layers.
  */
 
-import { state } from '../state.js';
-import { switchTab } from '../ui.js';
-import { toMeters, formatDistance, getDefaultDistanceUnit } from '../units.js';
+import { state } from '../state.js?v=9';
+import { switchTab } from '../ui.js?v=9';
+import { toMeters, formatDistance, getDefaultDistanceUnit } from '../units.js?v=9';
 
 export function renderBufferTool() {
   const isImp = state.unitSystem === 'imperial';

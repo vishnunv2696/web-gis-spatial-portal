@@ -4,10 +4,10 @@
  * shareable URL hash generation and restoration, North arrow, and reset view.
  */
 
-import { state } from './state.js';
-import { parseCoordinates, formatDD } from './coords.js';
-import { dropLocationMarker } from './search.js';
-import { MAP_CONFIG } from './config.js';
+import { state } from './state.js?v=9';
+import { parseCoordinates, formatDD } from './coords.js?v=9';
+import { dropLocationMarker } from './search.js?v=9';
+import { MAP_CONFIG } from './config.js?v=9';
 
 const BOOKMARKS_KEY = 'geovista_bookmarks';
 

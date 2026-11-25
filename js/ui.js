@@ -4,7 +4,7 @@
  * theme toggling, modals, and toast notification messaging.
  */
 
-import { state } from './state.js';
+import { state } from './state.js?v=9';
 
 export function initUI() {
   setupTheme();

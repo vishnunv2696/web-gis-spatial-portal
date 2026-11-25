@@ -10,10 +10,10 @@
  *   - Summary breakdown aggregation table with locate on row click.
  */
 
-import { state } from '../state.js';
-import { switchTab } from '../ui.js';
-import { toMeters, fromMeters, formatDistance } from '../units.js';
-import { zoomToFeature } from '../layers.js';
+import { state } from '../state.js?v=9';
+import { switchTab } from '../ui.js?v=9';
+import { toMeters, fromMeters, formatDistance } from '../units.js?v=9';
+import { zoomToFeature } from '../layers.js?v=9';
 
 const RELATION_DESCRIPTIONS = {
   intersects: 'Geometries share at least one point in common.',
