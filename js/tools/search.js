@@ -4,8 +4,8 @@
  * zooms to geometry, pulses highlight animation, and opens popup.
  */
 
-import { state } from '../state.js?v=9';
-import { zoomToFeature } from '../layers.js?v=9';
+import { state } from '../state.js?v=10';
+import { zoomToFeature } from '../layers.js?v=10';
 
 export function renderSearchTool() {
   return `

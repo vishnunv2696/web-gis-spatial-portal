@@ -4,7 +4,7 @@
  * theme toggling, modals, and toast notification messaging.
  */
 
-import { state } from './state.js?v=9';
+import { state } from './state.js?v=10';
 
 export function initUI() {
   setupTheme();
@@ -175,12 +175,8 @@ function setupSidebar() {
   const sidebar = document.getElementById('sidebar');
   const toggleBtn = document.getElementById('btn-toggle-sidebar');
 
-  // Collapse on small mobile screens by default, open on desktop
-  if (window.innerWidth <= 768 && sidebar) {
-    sidebar.classList.add('collapsed');
-  }
-
-  state.sidebarCollapsed = sidebar ? sidebar.classList.contains('collapsed') : false;
+  // Closed / collapsed by default
+  state.sidebarCollapsed = sidebar ? sidebar.classList.contains('collapsed') : true;
 
   const toggleSidebar = () => {
     if (!sidebar) return;

@@ -3,17 +3,17 @@
  * Initializes core map engine, UI components, layer manager, and geoprocessing tools.
  */
 
-import { initMap } from './map.js?v=9';
-import { initUI } from './ui.js?v=9';
-import { initLayers } from './layers.js?v=9';
-import { initTable } from './table.js?v=9';
-import { initTools } from './tools/index.js?v=9';
-import { initAuth } from './auth.js?v=9';
-import { initEdit } from './edit.js?v=9';
-import { initAdmin } from './admin.js?v=9';
-import { initLocationSearch } from './search.js?v=9';
-import { initNavigationExtras, restoreViewFromHash } from './navigation.js?v=9';
-import { state } from './state.js?v=9';
+import { initMap } from './map.js?v=10';
+import { initUI } from './ui.js?v=10';
+import { initLayers } from './layers.js?v=10';
+import { initTable } from './table.js?v=10';
+import { initTools } from './tools/index.js?v=10';
+import { initAuth } from './auth.js?v=10';
+import { initEdit } from './edit.js?v=10';
+import { initAdmin } from './admin.js?v=10';
+import { initLocationSearch } from './search.js?v=10';
+import { initNavigationExtras, restoreViewFromHash } from './navigation.js?v=10';
+import { state } from './state.js?v=10';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {

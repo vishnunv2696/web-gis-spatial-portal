@@ -4,9 +4,9 @@
  * interactive popups, hover highlights, and layer controls.
  */
 
-import { LAYER_CONFIGS, POINT_CATEGORY_COLORS, ROAD_CATEGORY_STYLES, DIVISION_COLORS } from './config.js?v=9';
-import { state } from './state.js?v=9';
-import { pulseAtLocation } from './map.js?v=9';
+import { LAYER_CONFIGS, POINT_CATEGORY_COLORS, ROAD_CATEGORY_STYLES, DIVISION_COLORS } from './config.js?v=10';
+import { state } from './state.js?v=10';
+import { pulseAtLocation } from './map.js?v=10';
 
 export async function initLayers() {
   const container = document.getElementById('layers-list');

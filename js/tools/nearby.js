@@ -5,10 +5,10 @@
  * highlights matches, and outputs a distance-sorted list with GeoJSON export.
  */
 
-import { state } from '../state.js?v=9';
-import { switchTab } from '../ui.js?v=9';
-import { zoomToFeature } from '../layers.js?v=9';
-import { toMeters, fromMeters, formatDistance } from '../units.js?v=9';
+import { state } from '../state.js?v=10';
+import { switchTab } from '../ui.js?v=10';
+import { zoomToFeature } from '../layers.js?v=10';
+import { toMeters, fromMeters, formatDistance } from '../units.js?v=10';
 
 let clickedLatLng = null;
 let clickPickerActive = false;

@@ -11,9 +11,9 @@
  *   - Reset restores all features, rows, counts, and clears highlights.
  */
 
-import { state } from '../state.js?v=9';
-import { pulseAtLocation } from '../map.js?v=9';
-import { openDrawerForLayer } from '../table.js?v=9';
+import { state } from '../state.js?v=10';
+import { pulseAtLocation } from '../map.js?v=10';
+import { openDrawerForLayer } from '../table.js?v=10';
 
 export function renderFilterTool() {
   return `
