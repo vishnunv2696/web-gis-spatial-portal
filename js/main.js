@@ -3,17 +3,17 @@
  * Initializes core map engine, UI components, layer manager, and geoprocessing tools.
  */
 
-import { initMap } from './map.js';
-import { initUI } from './ui.js';
-import { initLayers } from './layers.js';
-import { initTable } from './table.js';
-import { initTools } from './tools/index.js';
-import { initAuth } from './auth.js';
-import { initEdit } from './edit.js';
-import { initAdmin } from './admin.js';
-import { initLocationSearch } from './search.js';
-import { initNavigationExtras, restoreViewFromHash } from './navigation.js';
-import { state } from './state.js';
+import { initMap } from './map.js?v=7';
+import { initUI } from './ui.js?v=7';
+import { initLayers } from './layers.js?v=7';
+import { initTable } from './table.js?v=7';
+import { initTools } from './tools/index.js?v=7';
+import { initAuth } from './auth.js?v=7';
+import { initEdit } from './edit.js?v=7';
+import { initAdmin } from './admin.js?v=7';
+import { initLocationSearch } from './search.js?v=7';
+import { initNavigationExtras, restoreViewFromHash } from './navigation.js?v=7';
+import { state } from './state.js?v=7';
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
