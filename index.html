@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>GeoVista Portal | WebGIS Vector Platform</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- Leaflet MarkerCluster CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <!-- App Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/map.css?v=4">
+  <link rel="stylesheet" href="css/components.css?v=4">
+  <link rel="stylesheet" href="css/dark.css?v=4">
+</head>
+<body>
+
+  <!-- Full-Page Sign-In & Welcome Screen (Initial Screen) -->
+  <div id="auth-overlay" class="auth-overlay hidden">
+    <div class="auth-card">
+      <div class="auth-brand">
+        <div class="auth-logo">
+          <i data-lucide="globe-2"></i>
+        </div>
+        <div class="auth-title-wrap">
+          <h1 class="auth-title">GeoVista <span class="brand-tag">Portal</span></h1>
+          <p class="auth-subtitle">Vector WebGIS Platform</p>
+        </div>
+      </div>
+
+      <h2 class="auth-headline">Explore, analyze and share vector data</h2>
+      <p class="auth-subheadline">
+        Interactive maps, layer control and built-in geoprocessing for points, lines and polygons.
+      </p>
+
+      <!-- Expired Session / Status Alert -->
+      <div id="auth-session-expired-msg" class="auth-alert warning hide">
+        <i data-lucide="alert-triangle"></i>
+        <span id="auth-expired-text">Your session has expired. Please sign in again.</span>
+      </div>
+
+      <!-- Authentication Error Alert -->
+      <div id="auth-error-msg" class="auth-alert danger hide"></div>
+
+      <!-- Sign In Form -->
+      <form id="form-auth-page" class="auth-form" onsubmit="return false;">
+        <div class="auth-field">
+          <label for="auth-page-username">Username</label>
+          <div class="input-with-icon">
+            <i data-lucide="user" class="input-icon"></i>
+            <input type="text" id="auth-page-username" class="tool-input auth-input" placeholder="Enter username" required autocomplete="username">
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label for="auth-page-password">Password</label>
+          <div class="input-with-icon">
+            <i data-lucide="lock" class="input-icon"></i>
+            <input type="password" id="auth-page-password" class="tool-input auth-input" placeholder="Enter password" required autocomplete="current-password">
+          </div>
+        </div>
+
+        <div class="auth-security-note">
+          <i data-lucide="shield-check" class="icon-sm"></i>
+          <span>Protected by encrypted credentials & 5-attempt lockout defense.</span>
+        </div>
+
+        <button type="submit" id="btn-auth-signin" class="btn btn-primary btn-lg auth-submit-btn">
+          <i data-lucide="log-in"></i> Sign In
+        </button>
+      </form>
+
+      <!-- Secondary Viewer Link -->
+      <div class="auth-viewer-option" id="auth-viewer-container">
+        <button type="button" id="btn-continue-viewer" class="auth-viewer-link" title="Explore the map in read-only viewer mode">
+          Continue as viewer (read-only) &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar" role="banner">
+    <!-- LEFT ZONE: Sidebar Toggle + Brand -->
+    <div class="navbar-left">
+      <button id="btn-toggle-sidebar" class="btn-icon" title="Toggle Sidebar (Ctrl+B)" aria-label="Toggle Sidebar">
+        <i data-lucide="panel-left-close"></i>
+      </button>
+      <div class="brand" id="nav-brand">
+        <div class="brand-logo" id="nav-brand-logo">
+          <i data-lucide="globe-2"></i>
+        </div>
+        <div class="brand-info" id="nav-brand-info">
+          <span class="brand-name">GeoVista <span class="brand-tag">Portal</span></span>
+          <span class="brand-sub">Vector WebGIS Platform</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTRE ZONE: Search Input & Dropdown -->
+    <div class="navbar-center" id="navbar-search-center">
+      <div class="nav-search-wrap" id="nav-search-wrap">
+        <div class="nav-search-box">
+          <i data-lucide="search" class="nav-search-icon"></i>
+          <input 
+            type="text" 
+            id="nav-search-input" 
+            class="nav-search-input" 
+            placeholder="Search place or coordinates" 
+            autocomplete="off"
+            aria-label="Search place or coordinates"
+            aria-autocomplete="list"
+            aria-controls="nav-search-dropdown"
+          />
+          <button id="btn-search-clear" class="btn-search-clear hide" title="Clear search" aria-label="Clear search">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        
+        <!-- Search Results & Suggestions Dropdown -->
+        <div id="nav-search-dropdown" class="nav-search-dropdown hide" role="listbox">
+          <div class="search-options-toolbar">
+            <label class="search-bounded-label" title="Limit search results strictly to visible map boundaries">
+              <input type="checkbox" id="search-bounded-check">
+              <span>Only inside map view</span>
+            </label>
+            <span class="search-hint-badge">Press Enter to search places</span>
+          </div>
+
+          <div id="search-results-list" class="search-results-list">
+            <!-- Dynamic search results, coordinate suggestions, and recent searches -->
+          </div>
+
+          <div class="search-attribution" id="search-attribution">
+            <span>Data © OpenStreetMap contributors, ODbL 1.0</span>
+          </div>
+        </div>
+      </div>
+      <button id="btn-mobile-search-close" class="btn-icon mobile-search-close-btn" title="Close search" aria-label="Close search">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- RIGHT ZONE: Actions + Settings + User Menu -->
+    <div class="navbar-right">
+      <!-- Mobile Search Magnifier Button (visible only when center search is collapsed) -->
+      <button id="btn-mobile-search-toggle" class="btn-icon mobile-search-btn" title="Search places or coordinates" aria-label="Open search">
+        <i data-lucide="search"></i>
+      </button>
+
+      <!-- Primary Action Buttons (icon-first with tooltips) -->
+      <div class="nav-actions-group" id="nav-actions-group">
+        <button id="btn-nav-layers" class="btn-icon btn-ghost nav-action-btn" title="Manage Vector Layers" aria-label="Layers">
+          <i data-lucide="layers"></i>
+          <span class="nav-btn-label">Layers</span>
+        </button>
+        <button id="btn-nav-tools" class="btn-icon btn-ghost nav-action-btn" title="Geoprocessing Tools" aria-label="Tools">
+          <i data-lucide="wrench"></i>
+          <span class="nav-btn-label">Tools</span>
+        </button>
+        <button id="btn-nav-basemap" class="btn-icon btn-ghost nav-action-btn" title="Switch Basemap" aria-label="Basemap">
+          <i data-lucide="map"></i>
+          <span class="nav-btn-label">Basemap</span>
+        </button>
+        <button id="btn-toggle-drawer" class="btn-icon btn-ghost nav-action-btn" title="Attribute Table" aria-label="Table">
+          <i data-lucide="table"></i>
+          <span class="nav-btn-label">Table</span>
+        </button>
+        <button id="btn-nav-bookmarks" class="btn-icon btn-ghost nav-action-btn" title="Saved Map Bookmarks" aria-label="Bookmarks">
+          <i data-lucide="bookmark"></i>
+          <span class="nav-btn-label">Bookmarks</span>
+        </button>
+        <button id="btn-share-link" class="btn-icon btn-ghost nav-action-btn" title="Copy Shareable Link" aria-label="Share">
+          <i data-lucide="share-2"></i>
+          <span class="nav-btn-label">Share</span>
+        </button>
+      </div>
+
+      <!-- Mobile Actions Overflow Toggle (visible <= 480px) -->
+      <div class="mobile-actions-wrap" id="mobile-actions-wrap">
+        <button id="btn-mobile-actions-toggle" class="btn-icon mobile-actions-btn" title="Map Actions" aria-label="More actions" aria-haspopup="true" aria-expanded="false">
+          <i data-lucide="more-horizontal"></i>
+        </button>
+        <div class="mobile-actions-dropdown" id="mobile-actions-dropdown" role="menu">
+          <button class="mobile-dropdown-item" id="m-btn-nav-layers" role="menuitem">
+            <i data-lucide="layers"></i> <span>Layers</span>
+          </button>
+          <button class="mobile-dropdown-item" id="m-btn-nav-tools" role="menuitem">
+            <i data-lucide="wrench"></i> <span>Tools</span>
+          </button>
+          <button class="mobile-dropdown-item" id="m-btn-nav-basemap" role="menuitem">
+            <i data-lucide="map"></i> <span>Basemap</span>
+          </button>
+          <button class="mobile-dropdown-item" id="m-btn-toggle-drawer" role="menuitem">
+            <i data-lucide="table"></i> <span>Table</span>
+          </button>
+          <button class="mobile-dropdown-item" id="m-btn-nav-bookmarks" role="menuitem">
+            <i data-lucide="bookmark"></i> <span>Bookmarks</span>
+          </button>
+          <button class="mobile-dropdown-item" id="m-btn-share-link" role="menuitem">
+            <i data-lucide="share-2"></i> <span>Share</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-divider"></div>
+
+      <!-- Settings Menu (Units, Theme, About) -->
+      <div class="settings-menu-wrap" id="nav-settings-menu-wrap">
+        <button id="btn-nav-settings" class="btn-icon" title="Settings (Metric)" aria-label="Settings" aria-haspopup="true" aria-expanded="false">
+          <i data-lucide="settings"></i>
+        </button>
+        <div class="settings-dropdown" id="settings-dropdown" role="menu" aria-label="Settings Menu">
+          <div class="settings-dropdown-header">
+            <i data-lucide="sliders" class="icon-sm"></i>
+            <span>Preferences & Info</span>
+          </div>
+
+          <!-- Units Option -->
+          <button class="settings-dropdown-item" id="btn-units-toggle" role="menuitem" title="Toggle Units (Metric: m, km / Imperial: ft, mi)">
+            <i data-lucide="scale"></i>
+            <span class="settings-item-label">Units</span>
+            <span class="settings-badge" id="nav-units-badge">Metric (m)</span>
+          </button>
+
+          <!-- Theme Option -->
+          <button class="settings-dropdown-item" id="btn-theme-toggle" role="menuitem" title="Toggle Dark / Light Theme">
+            <i data-lucide="moon" id="theme-icon"></i>
+            <span class="settings-item-label">Theme</span>
+            <span class="settings-badge" id="theme-badge">Dark</span>
+          </button>
+
+          <div class="dropdown-divider"></div>
+
+          <!-- About Option -->
+          <button class="settings-dropdown-item" id="btn-nav-about" role="menuitem" title="About GeoVista Portal">
+            <i data-lucide="info"></i>
+            <span class="settings-item-label">About GeoVista</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- User Authentication & Profile Menu -->
+      <div class="user-menu-wrap" id="nav-user-menu-wrap">
+        <button id="btn-nav-auth" class="btn btn-sm btn-outline user-btn" title="Sign In or User Profile">
+          <i data-lucide="user"></i>
+          <span id="nav-user-badge">Log In</span>
+        </button>
+        <div class="user-dropdown" id="user-dropdown">
+          <div class="user-dropdown-header">
+            <i data-lucide="shield" class="icon-sm"></i>
+            <span>Account & Access</span>
+          </div>
+          <button class="user-dropdown-item admin-only-item hide" id="btn-menu-edit-history">
+            <i data-lucide="history"></i>
+            <span>Edit History (Audit Log)</span>
+          </button>
+          <button class="user-dropdown-item admin-only-item hide" id="btn-menu-users">
+            <i data-lucide="users"></i>
+            <span>Users Management</span>
+          </button>
+          <button class="user-dropdown-item editor-admin-item hide" id="btn-menu-export-history">
+            <i data-lucide="file-text"></i>
+            <span>Export Activity Log</span>
+          </button>
+          <div class="nav-divider" style="width:100%;height:1px;margin:4px 0;"></div>
+          <button class="user-dropdown-item text-danger" id="btn-menu-logout">
+            <i data-lucide="log-out"></i>
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Application Body -->
+  <div class="app-container">
+    
+    <!-- Collapsible Sidebar -->
+    <aside id="sidebar" class="sidebar collapsed" role="complementary" aria-label="Sidebar">
+      <!-- Sidebar Navigation Tabs -->
+      <nav class="sidebar-tabs" role="tablist">
+        <button class="sidebar-tab active" data-tab="layers" role="tab" aria-selected="true" title="Layers">
+          <i data-lucide="layers"></i>
+          <span>Layers</span>
+        </button>
+        <button class="sidebar-tab" data-tab="tools" role="tab" aria-selected="false" title="Tools">
+          <i data-lucide="wrench"></i>
+          <span>Tools</span>
+        </button>
+        <button class="sidebar-tab" data-tab="edit" role="tab" aria-selected="false" title="Edit Vector Features">
+          <i data-lucide="edit-3"></i>
+          <span>Edit</span>
+        </button>
+        <button class="sidebar-tab" data-tab="results" role="tab" aria-selected="false" title="Results">
+          <i data-lucide="sparkles"></i>
+          <span>Results</span>
+          <span id="results-count-badge" class="badge badge-accent hide">0</span>
+        </button>
+        <button class="sidebar-tab" data-tab="legend" role="tab" aria-selected="false" title="Legend">
+          <i data-lucide="list"></i>
+          <span>Legend</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Tab Panels -->
+      <div class="sidebar-content">
+        
+        <!-- Tab 1: Layers -->
+        <section id="panel-layers" class="tab-panel active" role="tabpanel">
+          <div class="panel-header" style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <h3>Vector Layers</h3>
+              <span class="badge" id="total-layers-badge">3 layers</span>
+            </div>
+            <button id="btn-refresh-layers" class="btn btn-sm btn-outline btn-refresh-layers" title="Reload all vector layers">
+              <i data-lucide="refresh-cw"></i> <span>Refresh</span>
+            </button>
+          </div>
+          <div id="layers-list" class="layers-list">
+            <!-- Rendered dynamically by js/layers.js -->
+            <div class="loading-state">
+              <i data-lucide="loader-2" class="spin"></i> Loading spatial data...
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 2: Geoprocessing Tools -->
+        <section id="panel-tools" class="tab-panel" role="tabpanel">
+          <div class="panel-header">
+            <h3>Geoprocessing Tools</h3>
+          </div>
+          <div class="tools-accordion" id="tools-container">
+            <!-- Rendered by js/tools/ -->
+          </div>
+        </section>
+
+        <!-- Tab 3: Feature Editing (Editor & Admin) -->
+        <section id="panel-edit" class="tab-panel" role="tabpanel">
+          <!-- Rendered dynamically by js/edit.js -->
+        </section>
+
+        <!-- Tab 4: Analysis Results -->
+        <section id="panel-results" class="tab-panel" role="tabpanel">
+          <div class="panel-header">
+            <h3>Analysis Results</h3>
+            <button id="btn-clear-results" class="btn btn-xs btn-outline-danger" title="Clear All Results">
+              <i data-lucide="trash-2"></i> Clear
+            </button>
+          </div>
+          <div id="results-list" class="results-list">
+            <div class="empty-state">
+              <i data-lucide="sparkles" class="empty-icon"></i>
+              <p>No active analysis results</p>
+              <span>Run a buffer, find nearby, or spatial join tool to see outputs here.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 4: Legend -->
+        <section id="panel-legend" class="tab-panel" role="tabpanel">
+          <div class="panel-header">
+            <h3>Map Legend</h3>
+          </div>
+          <div id="legend-content" class="legend-content">
+            <!-- Rendered dynamically -->
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+    <!-- Map Viewport Container -->
+    <main class="map-wrapper" role="main">
+      <div id="map" class="map-viewport"></div>
+
+      <!-- Data Layer Status / Notice Panel -->
+      <div id="db-error-panel" class="db-error-panel hide" role="alert">
+        <div class="db-error-icon">
+          <i data-lucide="alert-circle"></i>
+        </div>
+        <div class="db-error-content">
+          <h4>Data Loading Notice</h4>
+          <p id="db-error-message">Unable to load vector data.</p>
+        </div>
+        <button id="btn-db-retry" class="btn btn-sm btn-primary">
+          <i data-lucide="rotate-ccw"></i> Reload Data
+        </button>
+      </div>
+
+      <!-- Floating Map Control Toolbar -->
+      <div class="map-toolbar">
+        <button id="btn-zoom-in" class="map-tool-btn" title="Zoom In" aria-label="Zoom In">
+          <i data-lucide="plus"></i>
+        </button>
+        <button id="btn-zoom-out" class="map-tool-btn" title="Zoom Out" aria-label="Zoom Out">
+          <i data-lucide="minus"></i>
+        </button>
+        <button id="btn-reset-view" class="map-tool-btn" title="Reset View (Default Kozhikode Extent)" aria-label="Reset View">
+          <i data-lucide="rotate-ccw"></i>
+        </button>
+        <button id="btn-north-arrow" class="map-tool-btn" title="North Arrow (Orient North)" aria-label="North Arrow">
+          <i data-lucide="compass" id="north-arrow-icon" style="color:var(--primary);"></i>
+        </button>
+        <div class="map-tool-divider"></div>
+        <button id="btn-zoom-extent" class="map-tool-btn" title="Zoom to Full Extent" aria-label="Zoom Extent">
+          <i data-lucide="maximize-2"></i>
+        </button>
+        <button id="btn-locate-me" class="map-tool-btn" title="Locate My Position" aria-label="Locate Me">
+          <i data-lucide="crosshair"></i>
+        </button>
+        <div class="map-tool-divider"></div>
+        <button id="btn-map-legend" class="map-tool-btn" title="Toggle Map Legend" aria-label="Toggle Legend">
+          <i data-lucide="list"></i>
+        </button>
+        <button id="btn-basemap-card" class="map-tool-btn" title="Change Basemap" aria-label="Basemap">
+          <i data-lucide="map"></i>
+        </button>
+        <button id="btn-fullscreen" class="map-tool-btn" title="Toggle Fullscreen" aria-label="Fullscreen">
+          <i data-lucide="expand"></i>
+        </button>
+      </div>
+
+      <!-- Adjustable Floating Map Legend -->
+      <div id="floating-legend" class="floating-legend" role="region" aria-label="Map Legend">
+        <div class="legend-header" id="floating-legend-header" title="Drag to reposition legend">
+          <div class="legend-title">
+            <i data-lucide="layers" class="icon-sm"></i>
+            <span>Legend</span>
+          </div>
+          <div class="legend-header-actions">
+            <button id="btn-legend-collapse" class="legend-btn" title="Collapse / Expand Legend" aria-label="Collapse Legend">
+              <i data-lucide="chevron-down" id="legend-collapse-icon"></i>
+            </button>
+            <button id="btn-legend-reset" class="legend-btn" title="Reset Position & Dock" aria-label="Reset Legend Position">
+              <i data-lucide="rotate-ccw"></i>
+            </button>
+            <button id="btn-legend-close" class="legend-btn" title="Hide Legend" aria-label="Close Legend">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="legend-body" id="floating-legend-body">
+          <div id="floating-legend-content" class="legend-content">
+            <!-- Rendered dynamically by js/layers.js -->
+          </div>
+        </div>
+        <div class="legend-resize-handle" id="floating-legend-resize" title="Drag corner to resize"></div>
+      </div>
+
+      <!-- Attribute Table Bottom Panel (Centred on Map) -->
+      <div id="attribute-drawer" class="attribute-drawer" aria-hidden="true">
+        <div class="drawer-header">
+          <div class="drawer-tabs" id="drawer-layer-tabs">
+            <!-- Injected dynamically -->
+          </div>
+          <div class="drawer-actions">
+            <div class="search-input-wrap">
+              <i data-lucide="search" class="search-icon"></i>
+              <input type="text" id="table-search" placeholder="Search attributes..." autocomplete="off">
+            </div>
+            <span class="drawer-count-badge" id="table-row-count">0 features</span>
+            <button id="btn-export-csv" class="btn btn-sm btn-outline" title="Export as CSV">
+              <i data-lucide="download"></i> Export CSV
+            </button>
+            <button id="btn-close-drawer" class="btn-icon" title="Close Drawer" aria-label="Close">
+              <i data-lucide="chevron-down"></i>
+            </button>
+          </div>
+        </div>
+        <div class="drawer-body">
+          <div class="table-container" id="attribute-table-container">
+            <!-- Rendered by js/table.js -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Bottom Status Bar -->
+  <footer class="status-bar" role="contentinfo">
+    <div class="status-item status-coords-item" id="status-coords-wrap" title="Click to enter coordinates and jump to location">
+      <i data-lucide="mouse-pointer-2" class="status-icon"></i>
+      <span id="status-coords" class="status-coords-clickable">Lat: -- &bull; Lon: --</span>
+      <div id="status-coords-input-box" class="status-coords-input-box hide">
+        <input type="text" id="status-coords-input" placeholder="e.g. 11.2555, 75.7807" autocomplete="off" />
+        <button id="btn-status-coords-go" class="btn-status-coords-btn" title="Go to coordinates"><i data-lucide="corner-down-left"></i></button>
+        <button id="btn-status-coords-close" class="btn-status-coords-btn" title="Cancel"><i data-lucide="x"></i></button>
+      </div>
+    </div>
+    <div class="status-item">
+      <i data-lucide="zoom-in" class="status-icon"></i>
+      <span id="status-zoom">Zoom: 15</span>
+    </div>
+    <div class="status-item">
+      <span class="status-badge" id="status-crs">EPSG:4326</span>
+    </div>
+    <div class="status-item right hide-mobile">
+      <span id="status-summary">Manachira, Kozhikode &bull; 3 Layers Active</span>
+    </div>
+  </footer>
+
+  <!-- Map Bookmarks Modal -->
+  <div id="modal-bookmarks" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" style="max-width: 460px;">
+      <div class="modal-header">
+        <h3><i data-lucide="bookmark"></i> Map Bookmarks</h3>
+        <button class="btn-icon modal-close" data-modal="modal-bookmarks" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="background:var(--bg-subtle);padding:12px;border-radius:var(--radius-md);margin-bottom:14px;">
+          <label style="font-size:12px;font-weight:600;display:block;margin-bottom:6px;">Save Current Map View:</label>
+          <div style="display:flex;gap:6px;">
+            <input type="text" id="input-bookmark-name" class="tool-input" placeholder="Bookmark name (e.g. Mananchira Zone)" style="flex:1;">
+            <button id="btn-save-bookmark" class="btn btn-sm btn-primary">Save</button>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+          <span style="font-size:11.5px;font-weight:700;color:var(--text-muted);text-transform:uppercase;">Saved Locations</span>
+          <button id="btn-home-extent" class="btn btn-xs btn-outline" title="Return to default Kozhikode extent">
+            <i data-lucide="home"></i> Home Extent
+          </button>
+        </div>
+        <div id="bookmarks-list" style="max-height: 240px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px;">
+          <!-- Rendered by js/navigation.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basemap Switcher Modal -->
+  <div id="modal-basemap" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i data-lucide="map"></i> Select Basemap</h3>
+        <button class="btn-icon modal-close" data-modal="modal-basemap" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="basemap-grid" id="basemap-grid">
+          <!-- Rendered by js/map.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Portal Modal -->
+  <div id="modal-about" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card modal-about-card">
+      <div class="modal-header">
+        <div class="brand">
+          <div class="brand-logo"><i data-lucide="globe-2"></i></div>
+          <div class="brand-info">
+            <span class="brand-name">GeoVista Portal</span>
+            <span class="brand-sub">Vector-Focused WebGIS</span>
+          </div>
+        </div>
+        <button class="btn-icon modal-close" data-modal="modal-about" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body about-body">
+        <p class="about-headline">
+          <strong>"Explore, analyze and share vector data in one place"</strong>
+        </p>
+        <p>
+          GeoVista Portal delivers modern geospatial visualization and client-side geoprocessing 
+          directly in your browser with zero backend dependencies and zero API keys.
+        </p>
+
+        <h4>Tech Stack</h4>
+        <ul class="about-tech-list">
+          <li><strong>Mapping Engine:</strong> Leaflet 1.9.4</li>
+          <li><strong>Geoprocessing:</strong> Built-in vector analysis engine (Search, Filter, Calculator & Statistics, Buffer, Nearby Proximity, Spatial Join, Buffer Impact, Measurement)</li>
+          <li><strong>Marker Clustering:</strong> Leaflet.markercluster 1.5.3</li>
+          <li><strong>Architecture:</strong> Vanilla ECMAScript Modules (ESM)</li>
+          <li><strong>Coordinate System:</strong> EPSG:4326 (WGS 84)</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary modal-close" data-modal="modal-about">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Login Modal -->
+  <div id="modal-login" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" style="max-width: 400px;">
+      <div class="modal-header">
+        <h3><i data-lucide="log-in"></i> Sign In to GeoVista</h3>
+        <button class="btn-icon modal-close" data-modal="modal-login" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form-login" onsubmit="return false;">
+          <div id="login-error-msg" class="hide" style="padding:8px 12px;background:rgba(239,68,68,0.12);color:var(--danger);border-radius:var(--radius-sm);font-size:12px;margin-bottom:12px;font-weight:600;"></div>
+
+          <div class="tool-form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" class="tool-input" placeholder="Enter username" required autocomplete="username">
+          </div>
+
+          <div class="tool-form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" class="tool-input" placeholder="Enter your password" required autocomplete="current-password">
+          </div>
+
+          <div style="font-size:11.5px;color:var(--text-muted);margin:8px 0 16px;">
+            <i data-lucide="shield" style="width:13px;height:13px;vertical-align:middle;"></i>
+            Protected by bcrypt hashing & 5-attempt account lockout.
+          </div>
+
+          <button type="submit" id="btn-submit-login" class="btn btn-primary" style="width:100%;">
+            <i data-lucide="log-in"></i> Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Edit History (Audit Log) Modal -->
+  <div id="modal-edit-history" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" style="max-width: 900px; width: 92vw;">
+      <div class="modal-header">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <h3><i data-lucide="history"></i> Edit History (Audit Log)</h3>
+          <span class="badge badge-accent" id="history-count-badge">0 audit events</span>
+        </div>
+        <button class="btn-icon modal-close" data-modal="modal-edit-history" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding:16px;">
+        <!-- Filters Toolbar -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px;background:var(--bg-subtle);padding:10px 14px;border-radius:var(--radius-md);">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <label style="font-size:11.5px;font-weight:600;">Layer:</label>
+            <select id="history-layer-filter" class="tool-select" style="width:140px;padding:4px 8px;">
+              <option value="">All Layers</option>
+              <option value="points">Points of Interest</option>
+              <option value="roads">Road Network</option>
+              <option value="division_boundary">Division Boundaries</option>
+            </select>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:6px;">
+            <label style="font-size:11.5px;font-weight:600;">Action:</label>
+            <select id="history-action-filter" class="tool-select" style="width:120px;padding:4px 8px;">
+              <option value="">All Actions</option>
+              <option value="CREATE">CREATE</option>
+              <option value="UPDATE">UPDATE</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:6px;">
+            <label style="font-size:11.5px;font-weight:600;">User:</label>
+            <input type="text" id="history-user-filter" class="tool-input" placeholder="Username" style="width:110px;padding:4px 8px;">
+          </div>
+
+          <button id="btn-filter-history" class="btn btn-sm btn-primary">
+            <i data-lucide="filter"></i> Filter
+          </button>
+          <button id="btn-reset-history" class="btn btn-sm btn-outline">
+            <i data-lucide="rotate-ccw"></i> Reset
+          </button>
+          <div style="margin-left:auto;">
+            <button id="btn-export-history-csv" class="btn btn-sm btn-outline" title="Export audit trail as CSV">
+              <i data-lucide="download"></i> Export CSV
+            </button>
+          </div>
+        </div>
+
+        <div id="history-table-container" style="max-height: 55vh; overflow: auto; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+          <!-- Rendered by js/admin.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Users Management Modal -->
+  <div id="modal-admin-users" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" style="max-width: 760px; width: 90vw;">
+      <div class="modal-header">
+        <h3><i data-lucide="users"></i> User Management</h3>
+        <button class="btn-icon modal-close" data-modal="modal-admin-users" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding:16px;">
+        <!-- Add New User Form -->
+        <div style="background:var(--bg-subtle);padding:14px;border-radius:var(--radius-md);margin-bottom:16px;">
+          <h4 style="font-size:13px;margin-bottom:10px;"><i data-lucide="user-plus" class="icon-sm"></i> Add New System User</h4>
+          <form id="form-admin-create-user" onsubmit="return false;" style="display:grid;grid-template-columns: 2fr 2fr 1.5fr auto;gap:8px;align-items:flex-end;">
+            <div class="tool-form-group" style="margin-bottom:0;">
+              <label>Username</label>
+              <input type="text" id="admin-new-username" class="tool-input" placeholder="Username" required>
+            </div>
+            <div class="tool-form-group" style="margin-bottom:0;">
+              <label>Password (min 8)</label>
+              <input type="password" id="admin-new-password" class="tool-input" placeholder="Password" required>
+            </div>
+            <div class="tool-form-group" style="margin-bottom:0;">
+              <label>Role</label>
+              <select id="admin-new-role" class="tool-select">
+                <option value="viewer">Viewer (Read-only)</option>
+                <option value="editor">Editor (Feature editing)</option>
+                <option value="admin">Admin (Full access)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i data-lucide="plus"></i> Add User
+            </button>
+          </form>
+        </div>
+
+        <div id="admin-users-table-container" style="max-height: 48vh; overflow: auto; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+          <!-- Rendered by js/admin.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Activity Audit Log Modal -->
+  <div id="modal-export-history" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card" style="max-width: 960px; width: 92vw;">
+      <div class="modal-header">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <h3><i data-lucide="file-text"></i> Data Export Activity Log</h3>
+          <span class="badge badge-accent" id="export-count-badge">0 total</span>
+          <span class="badge badge-blue" id="export-today-badge">0 today</span>
+        </div>
+        <button class="btn-icon modal-close" data-modal="modal-export-history" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding:16px;">
+        <!-- Filters Toolbar -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px;background:var(--bg-subtle);padding:10px 14px;border-radius:var(--radius-md);">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <label style="font-size:11.5px;font-weight:600;">Status:</label>
+            <select id="export-status-filter" class="tool-select" style="width:130px;padding:4px 8px;">
+              <option value="">All Attempts</option>
+              <option value="ALLOWED">ALLOWED</option>
+              <option value="DENIED">DENIED</option>
+            </select>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:6px;" id="export-user-filter-wrap">
+            <label style="font-size:11.5px;font-weight:600;">User:</label>
+            <input type="text" id="export-user-filter" class="tool-input" placeholder="Username" style="width:120px;padding:4px 8px;">
+          </div>
+
+          <button id="btn-filter-export-logs" class="btn btn-sm btn-primary">
+            <i data-lucide="filter"></i> Filter
+          </button>
+          <button id="btn-reset-export-logs" class="btn btn-sm btn-outline">
+            <i data-lucide="rotate-ccw"></i> Reset
+          </button>
+        </div>
+
+        <div id="export-table-container" style="max-height: 55vh; overflow: auto; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+          <!-- Rendered by js/admin.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Vendor Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="https://unpkg.com/@turf/turf@7.0.0/turf.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Application Bootstrap -->
+  <script type="module" src="js/main.js?v=6"></script>
+  <script type="module" src="scripts/check-navbar-bounds.js"></script>
+</body>
+</html>

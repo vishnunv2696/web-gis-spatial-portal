@@ -1,0 +1,118 @@
+/* ==========================================================================
+   GeoVista Portal - Dark Mode Overrides
+   ========================================================================== */
+
+[data-theme="dark"] {
+  --bg-app: #0B0F19;
+  --bg-surface: rgba(17, 24, 39, 0.90);
+  --bg-surface-solid: #111827;
+  --bg-surface-hover: #1F2937;
+  --bg-subtle: #1F2937;
+  --border-color: rgba(55, 65, 81, 0.65);
+  --border-strong: #4B5563;
+
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+
+  --primary: #38BDF8;
+  --primary-hover: #0EA5E9;
+  --primary-light: rgba(56, 189, 248, 0.18);
+  --accent-teal: #2DD4BF;
+
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .map-wrapper {
+  background-color: #0F172A;
+}
+
+[data-theme="dark"] .leaflet-control-scale-line {
+  background: rgba(17, 24, 39, 0.85) !important;
+  border-color: #9CA3AF !important;
+  color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .leaflet-control-attribution {
+  background: rgba(17, 24, 39, 0.85) !important;
+  color: #9CA3AF !important;
+}
+
+[data-theme="dark"] .leaflet-popup-content-wrapper {
+  background: #111827 !important;
+  border-color: #374151 !important;
+}
+
+[data-theme="dark"] .leaflet-popup-tip {
+  background: #111827 !important;
+}
+
+[data-theme="dark"] .popup-card-header,
+[data-theme="dark"] .popup-card-footer {
+  background: #1F2937 !important;
+  border-color: #374151 !important;
+}
+
+[data-theme="dark"] .popup-id-badge {
+  background: #111827 !important;
+  border-color: #4B5563 !important;
+  color: #E5E7EB !important;
+}
+
+[data-theme="dark"] .tool-select,
+[data-theme="dark"] .tool-input {
+  background-color: #1F2937;
+  border-color: #4B5563;
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .search-input-wrap input {
+  background-color: #1F2937;
+  border-color: #4B5563;
+  color: #F9FAFB;
+}
+
+[data-theme="dark"] .data-table th {
+  background: #1F2937;
+  color: #E5E7EB;
+  border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .data-table td {
+  border-bottom-color: #1F2937;
+}
+
+[data-theme="dark"] .data-table tr:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+}
+
+[data-theme="dark"] .data-table tr.selected {
+  background-color: rgba(56, 189, 248, 0.22);
+}
+
+[data-theme="dark"] .auth-overlay {
+  background: radial-gradient(circle at 50% 30%, #0B0F19 0%, #030712 100%);
+}
+
+[data-theme="dark"] .auth-card {
+  background: #111827;
+  border-color: #374151;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] .floating-legend {
+  background: rgba(17, 24, 39, 0.95);
+  border-color: #374151;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .legend-header {
+  background: #1F2937;
+  border-bottom-color: #374151;
+}
+
+[data-theme="dark"] .attribute-drawer {
+  background: #111827;
+  border-color: #374151;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+}

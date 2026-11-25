@@ -1,0 +1,2305 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781131,
+          11.255992
+        ]
+      },
+      "properties": {
+        "fid": 51,
+        "lat": 11.255992,
+        "lon": 75.781131,
+        "name": "CSI Church Calicut",
+        "div_id": "DIV-02",
+        "category": "place_of_worship",
+        "location": null,
+        "point_id": "PT-001",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782078,
+          11.257267
+        ]
+      },
+      "properties": {
+        "fid": 52,
+        "lat": 11.257267,
+        "lon": 75.782078,
+        "name": "Rays entrance coaching centre",
+        "div_id": "DIV-02",
+        "category": "educational_institution",
+        "location": null,
+        "point_id": "PT-002",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783463,
+          11.249909
+        ]
+      },
+      "properties": {
+        "fid": 53,
+        "lat": 11.249909,
+        "lon": 75.783463,
+        "name": "hotel city",
+        "div_id": "DIV-04",
+        "category": "restaurant",
+        "location": null,
+        "point_id": "PT-003",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782609,
+          11.258474
+        ]
+      },
+      "properties": {
+        "fid": 54,
+        "lat": 11.258474,
+        "lon": 75.782609,
+        "name": "Kairali  Theatre",
+        "div_id": "DIV-02",
+        "category": "cinema",
+        "location": null,
+        "point_id": "PT-004",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781884,
+          11.251297
+        ]
+      },
+      "properties": {
+        "fid": 55,
+        "lat": 11.251297,
+        "lon": 75.781884,
+        "name": "Aryabhavan",
+        "div_id": "DIV-04",
+        "category": "restaurant",
+        "location": null,
+        "point_id": "PT-005",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780185,
+          11.250849
+        ]
+      },
+      "properties": {
+        "fid": 56,
+        "lat": 11.250849,
+        "lon": 75.780185,
+        "name": "Address Mall",
+        "div_id": "DIV-04",
+        "category": "mall",
+        "location": null,
+        "point_id": "PT-006",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782978,
+          11.250657
+        ]
+      },
+      "properties": {
+        "fid": 57,
+        "lat": 11.250657,
+        "lon": 75.782978,
+        "name": "Government Women and Children Hospital",
+        "div_id": "DIV-04",
+        "category": "hospital",
+        "location": null,
+        "point_id": "PT-007",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783534,
+          11.249497
+        ]
+      },
+      "properties": {
+        "fid": 58,
+        "lat": 11.249497,
+        "lon": 75.783534,
+        "name": "Palayam Salafi Masjid",
+        "div_id": "DIV-04",
+        "category": "place_of_worship",
+        "location": null,
+        "point_id": "PT-008",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781819,
+          11.249573
+        ]
+      },
+      "properties": {
+        "fid": 59,
+        "lat": 11.249573,
+        "lon": 75.781819,
+        "name": "Metro Stores",
+        "div_id": "DIV-04",
+        "category": "department_store",
+        "location": null,
+        "point_id": "PT-009",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781674,
+          11.25734
+        ]
+      },
+      "properties": {
+        "fid": 60,
+        "lat": 11.25734,
+        "lon": 75.781674,
+        "name": "Kozhikode child line",
+        "div_id": "DIV-02",
+        "category": "charity",
+        "location": null,
+        "point_id": "PT-010",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782569,
+          11.258524
+        ]
+      },
+      "properties": {
+        "fid": 61,
+        "lat": 11.258524,
+        "lon": 75.782569,
+        "name": "Kerala State Film Development Corporation (KSFDC)",
+        "div_id": "DIV-02",
+        "category": "cinema",
+        "location": null,
+        "point_id": "PT-011",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.784318,
+          11.254762
+        ]
+      },
+      "properties": {
+        "fid": 62,
+        "lat": 11.254762,
+        "lon": 75.784318,
+        "name": "Indian Oil",
+        "div_id": "DIV-04",
+        "category": "fuel",
+        "location": null,
+        "point_id": "PT-012",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.776643,
+          11.2538
+        ]
+      },
+      "properties": {
+        "fid": 63,
+        "lat": 11.2538,
+        "lon": 75.776643,
+        "name": "M S S Auditorium",
+        "div_id": "DIV-03",
+        "category": "conference_centre",
+        "location": null,
+        "point_id": "PT-013",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780865,
+          11.257625
+        ]
+      },
+      "properties": {
+        "fid": 64,
+        "lat": 11.257625,
+        "lon": 75.780865,
+        "name": "Asoka Hospital and Nursing Home",
+        "div_id": "DIV-02",
+        "category": "hospital",
+        "location": null,
+        "point_id": "PT-014",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779595,
+          11.256428
+        ]
+      },
+      "properties": {
+        "fid": 65,
+        "lat": 11.256428,
+        "lon": 75.779595,
+        "name": "Central GST and Central Excise Division",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-015",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781441,
+          11.25708
+        ]
+      },
+      "properties": {
+        "fid": 66,
+        "lat": 11.25708,
+        "lon": 75.781441,
+        "name": "CSI Bethania",
+        "div_id": "DIV-02",
+        "category": "hostel",
+        "location": null,
+        "point_id": "PT-016",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78134,
+          11.249909
+        ]
+      },
+      "properties": {
+        "fid": 67,
+        "lat": 11.249909,
+        "lon": 75.78134,
+        "name": "Mittayi Theruvu",
+        "div_id": "DIV-04",
+        "category": "attraction",
+        "location": null,
+        "point_id": "PT-017",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778625,
+          11.257037
+        ]
+      },
+      "properties": {
+        "fid": 68,
+        "lat": 11.257037,
+        "lon": 75.778625,
+        "name": "Ration Shop",
+        "div_id": "DIV-01",
+        "category": "convenience",
+        "location": null,
+        "point_id": "PT-018",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779972,
+          11.258669
+        ]
+      },
+      "properties": {
+        "fid": 69,
+        "lat": 11.258669,
+        "lon": 75.779972,
+        "name": "Sunniya Arabic College",
+        "div_id": "DIV-01",
+        "category": "college",
+        "location": null,
+        "point_id": "PT-019",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782132,
+          11.255456
+        ]
+      },
+      "properties": {
+        "fid": 70,
+        "lat": 11.255456,
+        "lon": 75.782132,
+        "name": "BEM Girls Higher secondary school playground",
+        "div_id": "DIV-02",
+        "category": "playground",
+        "location": null,
+        "point_id": "PT-020",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779032,
+          11.25364
+        ]
+      },
+      "properties": {
+        "fid": 71,
+        "lat": 11.25364,
+        "lon": 75.779032,
+        "name": "Crown Theatre Audi 2",
+        "div_id": "DIV-03",
+        "category": "cinema",
+        "location": null,
+        "point_id": "PT-021",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782924,
+          11.250626
+        ]
+      },
+      "properties": {
+        "fid": 72,
+        "lat": 11.250626,
+        "lon": 75.782924,
+        "name": "Women and Children Hospital, Kozhikode",
+        "div_id": "DIV-04",
+        "category": "hospital",
+        "location": null,
+        "point_id": "PT-022",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779048,
+          11.253525
+        ]
+      },
+      "properties": {
+        "fid": 73,
+        "lat": 11.253525,
+        "lon": 75.779048,
+        "name": "Crown Theatre",
+        "div_id": "DIV-03",
+        "category": "cinema",
+        "location": null,
+        "point_id": "PT-023",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.784642,
+          11.255438
+        ]
+      },
+      "properties": {
+        "fid": 74,
+        "lat": 11.255438,
+        "lon": 75.784642,
+        "name": "ARC Coronation 4K Dolby Atmos Theatre",
+        "div_id": "DIV-02",
+        "category": "cinema",
+        "location": null,
+        "point_id": "PT-024",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778267,
+          11.256807
+        ]
+      },
+      "properties": {
+        "fid": 75,
+        "lat": 11.256807,
+        "lon": 75.778267,
+        "name": "Milk Sarbath",
+        "div_id": "DIV-01",
+        "category": "fast_food",
+        "location": null,
+        "point_id": "PT-025",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779918,
+          11.255354
+        ]
+      },
+      "properties": {
+        "fid": 76,
+        "lat": 11.255354,
+        "lon": 75.779918,
+        "name": "Ansari Park",
+        "div_id": "DIV-03",
+        "category": "park",
+        "location": null,
+        "point_id": "PT-026",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.784832,
+          11.255324
+        ]
+      },
+      "properties": {
+        "fid": 77,
+        "lat": 11.255324,
+        "lon": 75.784832,
+        "name": "DC Books",
+        "div_id": "DIV-02",
+        "category": "books",
+        "location": null,
+        "point_id": "PT-027",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.7807,
+          11.258438
+        ]
+      },
+      "properties": {
+        "fid": 78,
+        "lat": 11.258438,
+        "lon": 75.7807,
+        "name": "4in bazaar",
+        "div_id": "DIV-02",
+        "category": "mobile_phone",
+        "location": null,
+        "point_id": "PT-028",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778243,
+          11.255796
+        ]
+      },
+      "properties": {
+        "fid": 79,
+        "lat": 11.255796,
+        "lon": 75.778243,
+        "name": "Head Post Office",
+        "div_id": "DIV-03",
+        "category": "post_office",
+        "location": null,
+        "point_id": "PT-029",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780653,
+          11.250954
+        ]
+      },
+      "properties": {
+        "fid": 80,
+        "lat": 11.250954,
+        "lon": 75.780653,
+        "name": "Noor Mosque",
+        "div_id": "DIV-04",
+        "category": "place_of_worship",
+        "location": null,
+        "point_id": "PT-030",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783426,
+          11.254461
+        ]
+      },
+      "properties": {
+        "fid": 81,
+        "lat": 11.254461,
+        "lon": 75.783426,
+        "name": "Vanitha police station",
+        "div_id": "DIV-04",
+        "category": "police",
+        "location": null,
+        "point_id": "PT-031",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783861,
+          11.254768
+        ]
+      },
+      "properties": {
+        "fid": 82,
+        "lat": 11.254768,
+        "lon": 75.783861,
+        "name": "Dwaraka internet cafe",
+        "div_id": "DIV-04",
+        "category": "internet_cafe",
+        "location": null,
+        "point_id": "PT-032",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.776854,
+          11.253257
+        ]
+      },
+      "properties": {
+        "fid": 83,
+        "lat": 11.253257,
+        "lon": 75.776854,
+        "name": "St.Joseph's Junior School",
+        "div_id": "DIV-03",
+        "category": "school",
+        "location": null,
+        "point_id": "PT-033",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.777502,
+          11.253397
+        ]
+      },
+      "properties": {
+        "fid": 84,
+        "lat": 11.253397,
+        "lon": 75.777502,
+        "name": "Anakkulam Cultural Centre",
+        "div_id": "DIV-03",
+        "category": "conference_centre",
+        "location": null,
+        "point_id": "PT-034",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.777504,
+          11.259087
+        ]
+      },
+      "properties": {
+        "fid": 85,
+        "lat": 11.259087,
+        "lon": 75.777504,
+        "name": "Kotak Mahindra Bank",
+        "div_id": "DIV-01",
+        "category": "bank",
+        "location": null,
+        "point_id": "PT-035",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781674,
+          11.250276
+        ]
+      },
+      "properties": {
+        "fid": 86,
+        "lat": 11.250276,
+        "lon": 75.781674,
+        "name": "Bata",
+        "div_id": "DIV-04",
+        "category": "shoes",
+        "location": null,
+        "point_id": "PT-036",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78161,
+          11.254797
+        ]
+      },
+      "properties": {
+        "fid": 87,
+        "lat": 11.254797,
+        "lon": 75.78161,
+        "name": "Office of the Deputy Director of Education",
+        "div_id": "DIV-02",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-037",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782148,
+          11.258421
+        ]
+      },
+      "properties": {
+        "fid": 88,
+        "lat": 11.258421,
+        "lon": 75.782148,
+        "name": "Royal Plaza",
+        "div_id": "DIV-02",
+        "category": "restaurant",
+        "location": null,
+        "point_id": "PT-038",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.776481,
+          11.253927
+        ]
+      },
+      "properties": {
+        "fid": 89,
+        "lat": 11.253927,
+        "lon": 75.776481,
+        "name": "mss masjid",
+        "div_id": "DIV-03",
+        "category": "place_of_worship",
+        "location": null,
+        "point_id": "PT-039",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.784311,
+          11.258055
+        ]
+      },
+      "properties": {
+        "fid": 90,
+        "lat": 11.258055,
+        "lon": 75.784311,
+        "name": "Global College",
+        "div_id": "DIV-02",
+        "category": "college",
+        "location": null,
+        "point_id": "PT-040",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781734,
+          11.254919
+        ]
+      },
+      "properties": {
+        "fid": 91,
+        "lat": 11.254919,
+        "lon": 75.781734,
+        "name": "DDE Office",
+        "div_id": "DIV-02",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-041",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779134,
+          11.260887
+        ]
+      },
+      "properties": {
+        "fid": 92,
+        "lat": 11.260887,
+        "lon": 75.779134,
+        "name": "Aijnorah institutions",
+        "div_id": "DIV-01",
+        "category": "training",
+        "location": null,
+        "point_id": "PT-042",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778683,
+          11.255173
+        ]
+      },
+      "properties": {
+        "fid": 93,
+        "lat": 11.255173,
+        "lon": 75.778683,
+        "name": "Government Model Higher Secondary School, Mananchira",
+        "div_id": "DIV-03",
+        "category": "school",
+        "location": null,
+        "point_id": "PT-043",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782546,
+          11.255642
+        ]
+      },
+      "properties": {
+        "fid": 94,
+        "lat": 11.255642,
+        "lon": 75.782546,
+        "name": "Rays training centre",
+        "div_id": "DIV-02",
+        "category": "educational_institution",
+        "location": null,
+        "point_id": "PT-044",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780055,
+          11.252319
+        ]
+      },
+      "properties": {
+        "fid": 95,
+        "lat": 11.252319,
+        "lon": 75.780055,
+        "name": "V2",
+        "div_id": "DIV-03",
+        "category": "shoes",
+        "location": null,
+        "point_id": "PT-045",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779693,
+          11.256124
+        ]
+      },
+      "properties": {
+        "fid": 96,
+        "lat": 11.256124,
+        "lon": 75.779693,
+        "name": "Office of the Commissioner of Central GST, Central Excise & Customs",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-046",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783877,
+          11.257377
+        ]
+      },
+      "properties": {
+        "fid": 97,
+        "lat": 11.257377,
+        "lon": 75.783877,
+        "name": "ശ്രീകണ്ഠേശ്വര ക്ഷേത്രം",
+        "div_id": "DIV-02",
+        "category": "place_of_worship",
+        "location": null,
+        "point_id": "PT-047",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.776455,
+          11.256528
+        ]
+      },
+      "properties": {
+        "fid": 98,
+        "lat": 11.256528,
+        "lon": 75.776455,
+        "name": "Maniverse",
+        "div_id": "DIV-01",
+        "category": "tailor",
+        "location": null,
+        "point_id": "PT-048",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781745,
+          11.249955
+        ]
+      },
+      "properties": {
+        "fid": 99,
+        "lat": 11.249955,
+        "lon": 75.781745,
+        "name": "Witco",
+        "div_id": "DIV-04",
+        "category": "houseware",
+        "location": null,
+        "point_id": "PT-049",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780096,
+          11.257931
+        ]
+      },
+      "properties": {
+        "fid": 100,
+        "lat": 11.257931,
+        "lon": 75.780096,
+        "name": "Asoka Hospital And Nursing Home",
+        "div_id": "DIV-01",
+        "category": "hospital",
+        "location": null,
+        "point_id": "PT-050",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781116,
+          11.252857
+        ]
+      },
+      "properties": {
+        "fid": 101,
+        "lat": 11.252857,
+        "lon": 75.781116,
+        "name": "FRESH UP",
+        "div_id": "DIV-04",
+        "category": "fast_food",
+        "location": null,
+        "point_id": "PT-051",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.777004,
+          11.252104
+        ]
+      },
+      "properties": {
+        "fid": 102,
+        "lat": 11.252104,
+        "lon": 75.777004,
+        "name": "Adv. Baija P",
+        "div_id": "DIV-03",
+        "category": "lawyer",
+        "location": null,
+        "point_id": "PT-052",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783102,
+          11.250798
+        ]
+      },
+      "properties": {
+        "fid": 103,
+        "lat": 11.250798,
+        "lon": 75.783102,
+        "name": "Government Woman and Child Hospital's Blood Bank",
+        "div_id": "DIV-04",
+        "category": "blood_bank",
+        "location": null,
+        "point_id": "PT-053",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780117,
+          11.258949
+        ]
+      },
+      "properties": {
+        "fid": 104,
+        "lat": 11.258949,
+        "lon": 75.780117,
+        "name": "landship mall",
+        "div_id": "DIV-01",
+        "category": "mall",
+        "location": null,
+        "point_id": "PT-054",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781457,
+          11.252839
+        ]
+      },
+      "properties": {
+        "fid": 105,
+        "lat": 11.252839,
+        "lon": 75.781457,
+        "name": "Rickshaw Stand",
+        "div_id": "DIV-04",
+        "category": "taxi",
+        "location": null,
+        "point_id": "PT-055",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78089,
+          11.257089
+        ]
+      },
+      "properties": {
+        "fid": 106,
+        "lat": 11.257089,
+        "lon": 75.78089,
+        "name": "Sangeeth cottons",
+        "div_id": "DIV-02",
+        "category": "clothes",
+        "location": null,
+        "point_id": "PT-056",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780833,
+          11.256056
+        ]
+      },
+      "properties": {
+        "fid": 107,
+        "lat": 11.256056,
+        "lon": 75.780833,
+        "name": "CSI book store",
+        "div_id": "DIV-02",
+        "category": "books",
+        "location": null,
+        "point_id": "PT-057",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.777278,
+          11.258961
+        ]
+      },
+      "properties": {
+        "fid": 108,
+        "lat": 11.258961,
+        "lon": 75.777278,
+        "name": "BHARATH EDUCATION FOUNDATION",
+        "div_id": "DIV-01",
+        "category": "educational_institution",
+        "location": null,
+        "point_id": "PT-058",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778839,
+          11.251824
+        ]
+      },
+      "properties": {
+        "fid": 109,
+        "lat": 11.251824,
+        "lon": 75.778839,
+        "name": "Vigilance Court",
+        "div_id": "DIV-03",
+        "category": "courthouse",
+        "location": null,
+        "point_id": "PT-059",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78026,
+          11.251071
+        ]
+      },
+      "properties": {
+        "fid": 110,
+        "lat": 11.251071,
+        "lon": 75.78026,
+        "name": "Calicut Hospital And Nursing Home",
+        "div_id": "DIV-04",
+        "category": "hospital",
+        "location": null,
+        "point_id": "PT-060",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78134,
+          11.256234
+        ]
+      },
+      "properties": {
+        "fid": 111,
+        "lat": 11.256234,
+        "lon": 75.78134,
+        "name": "BEM Lower Primary School",
+        "div_id": "DIV-02",
+        "category": "school",
+        "location": null,
+        "point_id": "PT-061",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782623,
+          11.258724
+        ]
+      },
+      "properties": {
+        "fid": 112,
+        "lat": 11.258724,
+        "lon": 75.782623,
+        "name": "Sree Theatre",
+        "div_id": "DIV-02",
+        "category": "cinema",
+        "location": null,
+        "point_id": "PT-062",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.77993,
+          11.256243
+        ]
+      },
+      "properties": {
+        "fid": 113,
+        "lat": 11.256243,
+        "lon": 75.77993,
+        "name": "Income Tax Office",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-063",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.782474,
+          11.254132
+        ]
+      },
+      "properties": {
+        "fid": 114,
+        "lat": 11.254132,
+        "lon": 75.782474,
+        "name": "Office Of The City Police Commissioner",
+        "div_id": "DIV-04",
+        "category": "police",
+        "location": null,
+        "point_id": "PT-064",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780644,
+          11.254262
+        ]
+      },
+      "properties": {
+        "fid": 115,
+        "lat": 11.254262,
+        "lon": 75.780644,
+        "name": "Mananchira Square",
+        "div_id": "DIV-03",
+        "category": "attraction",
+        "location": null,
+        "point_id": "PT-065",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780103,
+          11.258874
+        ]
+      },
+      "properties": {
+        "fid": 116,
+        "lat": 11.258874,
+        "lon": 75.780103,
+        "name": "my G mobile",
+        "div_id": "DIV-01",
+        "category": "mobile_phone",
+        "location": null,
+        "point_id": "PT-066",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781539,
+          11.249738
+        ]
+      },
+      "properties": {
+        "fid": 117,
+        "lat": 11.249738,
+        "lon": 75.781539,
+        "name": "Minar Fashion Jewellery",
+        "div_id": "DIV-04",
+        "category": "jewelry",
+        "location": null,
+        "point_id": "PT-067",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780473,
+          11.259772
+        ]
+      },
+      "properties": {
+        "fid": 118,
+        "lat": 11.259772,
+        "lon": 75.780473,
+        "name": "KFC Calicut",
+        "div_id": "DIV-01",
+        "category": "restaurant",
+        "location": null,
+        "point_id": "PT-068",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779237,
+          11.256247
+        ]
+      },
+      "properties": {
+        "fid": 119,
+        "lat": 11.256247,
+        "lon": 75.779237,
+        "name": "Income Tax Office",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-069",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.776671,
+          11.252483
+        ]
+      },
+      "properties": {
+        "fid": 120,
+        "lat": 11.252483,
+        "lon": 75.776671,
+        "name": "mathrubhumi",
+        "div_id": "DIV-03",
+        "category": "newspaper",
+        "location": null,
+        "point_id": "PT-070",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781569,
+          11.254476
+        ]
+      },
+      "properties": {
+        "fid": 121,
+        "lat": 11.254476,
+        "lon": 75.781569,
+        "name": "District Education Office, Thazhekkod",
+        "div_id": "DIV-02",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-071",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781279,
+          11.248732
+        ]
+      },
+      "properties": {
+        "fid": 122,
+        "lat": 11.248732,
+        "lon": 75.781279,
+        "name": "Dewar",
+        "div_id": "DIV-04",
+        "category": "restaurant",
+        "location": null,
+        "point_id": "PT-072",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779232,
+          11.256075
+        ]
+      },
+      "properties": {
+        "fid": 123,
+        "lat": 11.256075,
+        "lon": 75.779232,
+        "name": "Income Tax Office",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-073",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778234,
+          11.2569
+        ]
+      },
+      "properties": {
+        "fid": 124,
+        "lat": 11.2569,
+        "lon": 75.778234,
+        "name": "LENS HOUSE",
+        "div_id": "DIV-01",
+        "category": "optician",
+        "location": null,
+        "point_id": "PT-074",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.77862,
+          11.256466
+        ]
+      },
+      "properties": {
+        "fid": 125,
+        "lat": 11.256466,
+        "lon": 75.77862,
+        "name": "Sub Treasury",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-075",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780073,
+          11.258167
+        ]
+      },
+      "properties": {
+        "fid": 126,
+        "lat": 11.258167,
+        "lon": 75.780073,
+        "name": "dubaaibazaar",
+        "div_id": "DIV-01",
+        "category": "mobile_phone",
+        "location": null,
+        "point_id": "PT-076",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778762,
+          11.256351
+        ]
+      },
+      "properties": {
+        "fid": 127,
+        "lat": 11.256351,
+        "lon": 75.778762,
+        "name": "Sub Treasuary",
+        "div_id": "DIV-01",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-077",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.784665,
+          11.255052
+        ]
+      },
+      "properties": {
+        "fid": 128,
+        "lat": 11.255052,
+        "lon": 75.784665,
+        "name": "kerala state beverages",
+        "div_id": "DIV-04",
+        "category": "beverages",
+        "location": null,
+        "point_id": "PT-078",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781252,
+          11.254113
+        ]
+      },
+      "properties": {
+        "fid": 129,
+        "lat": 11.254113,
+        "lon": 75.781252,
+        "name": "Mananchira Park",
+        "div_id": "DIV-03",
+        "category": "park",
+        "location": null,
+        "point_id": "PT-079",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.784055,
+          11.259047
+        ]
+      },
+      "properties": {
+        "fid": 130,
+        "lat": 11.259047,
+        "lon": 75.784055,
+        "name": "LBS Centre for Science and Technology",
+        "div_id": "DIV-02",
+        "category": "government",
+        "location": null,
+        "point_id": "PT-080",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.777614,
+          11.257741
+        ]
+      },
+      "properties": {
+        "fid": 131,
+        "lat": 11.257741,
+        "lon": 75.777614,
+        "name": "State Bank of India",
+        "div_id": "DIV-01",
+        "category": "bank",
+        "location": null,
+        "point_id": "PT-081",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781852,
+          11.24889
+        ]
+      },
+      "properties": {
+        "fid": 132,
+        "lat": 11.24889,
+        "lon": 75.781852,
+        "name": "Mele Palayam",
+        "div_id": "DIV-04",
+        "category": "outdoor",
+        "location": null,
+        "point_id": "PT-082",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.77839,
+          11.256319
+        ]
+      },
+      "properties": {
+        "fid": 133,
+        "lat": 11.256319,
+        "lon": 75.77839,
+        "name": "K.K BAKERY AND COOLBAR",
+        "div_id": "DIV-03",
+        "category": "bakery",
+        "location": null,
+        "point_id": "PT-083",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781516,
+          11.250442
+        ]
+      },
+      "properties": {
+        "fid": 134,
+        "lat": 11.250442,
+        "lon": 75.781516,
+        "name": "Hanuman Kovil",
+        "div_id": "DIV-04",
+        "category": "place_of_worship",
+        "location": null,
+        "point_id": "PT-084",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780208,
+          11.255823
+        ]
+      },
+      "properties": {
+        "fid": 135,
+        "lat": 11.255823,
+        "lon": 75.780208,
+        "name": "State Bank of India",
+        "div_id": "DIV-01",
+        "category": "bank",
+        "location": null,
+        "point_id": "PT-085",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778942,
+          11.253917
+        ]
+      },
+      "properties": {
+        "fid": 136,
+        "lat": 11.253917,
+        "lon": 75.778942,
+        "name": "Kerala Lalithakala Acadamy Art Gallery",
+        "div_id": "DIV-03",
+        "category": "community_centre",
+        "location": null,
+        "point_id": "PT-086",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.78209,
+          11.248729
+        ]
+      },
+      "properties": {
+        "fid": 137,
+        "lat": 11.248729,
+        "lon": 75.78209,
+        "name": "Saleena Jewellery",
+        "div_id": "DIV-04",
+        "category": "jewelry",
+        "location": null,
+        "point_id": "PT-087",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778295,
+          11.256545
+        ]
+      },
+      "properties": {
+        "fid": 138,
+        "lat": 11.256545,
+        "lon": 75.778295,
+        "name": "Milk surbath",
+        "div_id": "DIV-03",
+        "category": "beverages",
+        "location": null,
+        "point_id": "PT-088",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.776154,
+          11.253427
+        ]
+      },
+      "properties": {
+        "fid": 139,
+        "lat": 11.253427,
+        "lon": 75.776154,
+        "name": "Federal Bank",
+        "div_id": "DIV-03",
+        "category": "bank",
+        "location": null,
+        "point_id": "PT-089",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.778405,
+          11.25625
+        ]
+      },
+      "properties": {
+        "fid": 140,
+        "lat": 11.25625,
+        "lon": 75.778405,
+        "name": "SREECO OPTICALS",
+        "div_id": "DIV-03",
+        "category": "optician",
+        "location": null,
+        "point_id": "PT-090",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780268,
+          11.250666
+        ]
+      },
+      "properties": {
+        "fid": 141,
+        "lat": 11.250666,
+        "lon": 75.780268,
+        "name": "Address Mall",
+        "div_id": "DIV-04",
+        "category": "mall",
+        "location": null,
+        "point_id": "PT-091",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.780217,
+          11.257122
+        ]
+      },
+      "properties": {
+        "fid": 142,
+        "lat": 11.257122,
+        "lon": 75.780217,
+        "name": "Bright tuition centre",
+        "div_id": "DIV-01",
+        "category": "educational_institution",
+        "location": null,
+        "point_id": "PT-092",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781092,
+          11.252506
+        ]
+      },
+      "properties": {
+        "fid": 143,
+        "lat": 11.252506,
+        "lon": 75.781092,
+        "name": "Ideal Books Used Bookstore",
+        "div_id": "DIV-04",
+        "category": "books",
+        "location": null,
+        "point_id": "PT-093",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781646,
+          11.250711
+        ]
+      },
+      "properties": {
+        "fid": 144,
+        "lat": 11.250711,
+        "lon": 75.781646,
+        "name": "SM Street Market",
+        "div_id": "DIV-04",
+        "category": "marketplace",
+        "location": null,
+        "point_id": "PT-094",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781172,
+          11.252611
+        ]
+      },
+      "properties": {
+        "fid": 145,
+        "lat": 11.252611,
+        "lon": 75.781172,
+        "name": "State Public Library and Research Centre",
+        "div_id": "DIV-04",
+        "category": "library",
+        "location": null,
+        "point_id": "PT-095",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781089,
+          11.252489
+        ]
+      },
+      "properties": {
+        "fid": 146,
+        "lat": 11.252489,
+        "lon": 75.781089,
+        "name": "Ideal Note Books And Stationery",
+        "div_id": "DIV-04",
+        "category": "stationery",
+        "location": null,
+        "point_id": "PT-096",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.781456,
+          11.255841
+        ]
+      },
+      "properties": {
+        "fid": 147,
+        "lat": 11.255841,
+        "lon": 75.781456,
+        "name": "CSI Hall, Mananchira",
+        "div_id": "DIV-02",
+        "category": "community_centre",
+        "location": null,
+        "point_id": "PT-097",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.783577,
+          11.254662
+        ]
+      },
+      "properties": {
+        "fid": 148,
+        "lat": 11.254662,
+        "lon": 75.783577,
+        "name": "Bharat Petroleum",
+        "div_id": "DIV-04",
+        "category": "fuel",
+        "location": null,
+        "point_id": "PT-098",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.777651,
+          11.258006
+        ]
+      },
+      "properties": {
+        "fid": 149,
+        "lat": 11.258006,
+        "lon": 75.777651,
+        "name": "PITTAPPILLIL AGENCIES",
+        "div_id": "DIV-01",
+        "category": "electrical",
+        "location": null,
+        "point_id": "PT-099",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.779161,
+          11.253942
+        ]
+      },
+      "properties": {
+        "fid": 150,
+        "lat": 11.253942,
+        "lon": 75.779161,
+        "name": "Calicut Town hall",
+        "div_id": "DIV-03",
+        "category": "townhall",
+        "location": null,
+        "point_id": "PT-100",
+        "created_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_at": "2026-11-25T18:39:39.677233+05:30",
+        "updated_by": "qgis-mcp"
+      }
+    }
+  ]
+}
