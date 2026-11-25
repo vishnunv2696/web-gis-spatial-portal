@@ -4,17 +4,17 @@
  * and renders the interactive Results tab with live cards, statistics, and GeoJSON downloads.
  */
 
-import { renderSearchTool, initSearchTool } from './search.js?v=7';
-import { renderFilterTool, initFilterTool } from './filter.js?v=7';
-import { renderCalculateTool, initCalculateTool } from './calculate.js?v=7';
-import { renderBufferTool, initBufferTool } from './buffer.js?v=7';
-import { renderNearbyTool, initNearbyTool } from './nearby.js?v=7';
-import { renderSpatialJoinTool, initSpatialJoinTool } from './spatialJoin.js?v=7';
-import { renderBufferImpactTool, initBufferImpactTool } from './bufferImpact.js?v=7';
-import { renderMeasureTool, initMeasureTool } from './measure.js?v=7';
-import { state } from '../state.js?v=7';
-import { zoomToFeature } from '../layers.js?v=7';
-import { formatDistance, formatArea } from '../units.js?v=7';
+import { renderSearchTool, initSearchTool } from './search.js';
+import { renderFilterTool, initFilterTool } from './filter.js';
+import { renderCalculateTool, initCalculateTool } from './calculate.js';
+import { renderBufferTool, initBufferTool } from './buffer.js';
+import { renderNearbyTool, initNearbyTool } from './nearby.js';
+import { renderSpatialJoinTool, initSpatialJoinTool } from './spatialJoin.js';
+import { renderBufferImpactTool, initBufferImpactTool } from './bufferImpact.js';
+import { renderMeasureTool, initMeasureTool } from './measure.js';
+import { state } from '../state.js';
+import { zoomToFeature } from '../layers.js';
+import { formatDistance, formatArea } from '../units.js';
 
 export function initTools() {
   const container = document.getElementById('tools-container');
