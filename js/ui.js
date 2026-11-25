@@ -175,8 +175,12 @@ function setupSidebar() {
   const sidebar = document.getElementById('sidebar');
   const toggleBtn = document.getElementById('btn-toggle-sidebar');
 
-  // Sidebar is closed by default in HTML (.collapsed)
-  state.sidebarCollapsed = sidebar ? sidebar.classList.contains('collapsed') : true;
+  // Collapse on small mobile screens by default, open on desktop
+  if (window.innerWidth <= 768 && sidebar) {
+    sidebar.classList.add('collapsed');
+  }
+
+  state.sidebarCollapsed = sidebar ? sidebar.classList.contains('collapsed') : false;
 
   const toggleSidebar = () => {
     if (!sidebar) return;

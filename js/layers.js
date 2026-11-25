@@ -739,8 +739,6 @@ export async function refreshAllLayers() {
         errors.push(`${config.title} (${err.message})`);
       }
     }
-      }
-    }
 
     // Update total badge
     const totalBadge = document.getElementById('total-layers-badge');
